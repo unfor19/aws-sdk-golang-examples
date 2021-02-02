@@ -1,0 +1,5 @@
+.*
+!.gitignore
+
+# binary
+aws-sdk-golang-examples
