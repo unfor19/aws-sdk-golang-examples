@@ -26,7 +26,7 @@ Especially useful if you're new go GoLang (like me). Tested on [WSL2](https://do
 1. Just in case - `unset GO111MODULE`
 1. Create a directory in `${HOME}/go/`
     ```bash
-    $ TARGET_DIR="${HOME}/go/src/internal/aws-sdk-golang-resourcegroupstaggingapi"
+    $ TARGET_DIR="${HOME}/go/src/internal/aws-sdk-golang-examples"
     $ mkdir -p "$TARGET_DIR"
     ```
 1. Why `/internal/`? Using the reserved keyword `internal` as a directory name instructs `go get` to consider all sub-directories as [internal packages](https://golang.org/doc/go1.4#internalpackages)
@@ -35,28 +35,28 @@ Especially useful if you're new go GoLang (like me). Tested on [WSL2](https://do
 
 ```bash
 # Download and install dependencies
-$ TARGET_DIR="${HOME}/go/src/internal/aws-sdk-golang-resourcegroupstaggingapi"
+$ TARGET_DIR="${HOME}/go/src/internal/aws-sdk-golang-examples"
 $ cd "$TARGET_DIR"
-$ cp aws-sdk-golang-resourcegroupstaggingapi.go "$TARGET_DIR"/
+$ cp main.go "$TARGET_DIR"/
 $ go get -u -v # -u = download latest, -v = verbose output
 # You can also use `go mod download`
 # See `go.mod` and `go.sum` section and check the Dockerfile
 
-# `go get` Also builds a binary and copies it to /usr/local/go/bin/aws-sdk-golang-examples
+# `go get` Also builds a binary and copies it to /usr/local/go/bin/resourcegroupstaggingapi
 # TODO: figure out why
 
-# Edit aws-sdk-golang-resourcegroupstaggingapi.go
+# Edit main.go
 # Set the relevant region and filters
 
 # Run the application from source code
 $ go run .
 
 # Build the application and run the binary
-$ go build .
-$ ./aws-sdk-golang-examples
+$ go build -o resourcegroupstaggingapi
+$ ./resourcegroupstaggingapi
 
 # Check the size of the binary file
-$ du -h aws-sdk-golang-examples # du = disk usage, -h = human readable
+$ du -h resourcegroupstaggingapi # du = disk usage, -h = human readable
 8.8M
 ```
 
