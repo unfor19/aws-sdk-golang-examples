@@ -34,5 +34,8 @@ ENTRYPOINT [ "sh" ]
 FROM alpine AS app
 WORKDIR "/app/"
 COPY --from=build "/app/main" ./
+RUN addgroup -S "appgroup" && adduser -S "appuser" -G "appgroup" && \
+    chown "appuser":"appgroup" main
+USER "appuser"
 ENTRYPOINT ["./main"]
 CMD ""
