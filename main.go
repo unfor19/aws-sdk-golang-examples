@@ -1,4 +1,6 @@
 /*
+### Source: https://github.com/unfor19/aws-sdk-golang-examples/blob/master/main.go
+
 ### Resource Groups Tagging API
 GoLang SDK Docs: https://docs.aws.amazon.com/sdk-for-go/api/service/resourcegroupstaggingapi/
 The package resourcegroupstaggingapi provides the client and types for making API requests to AWS Resource Groups Tagging API.
