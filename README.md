@@ -104,6 +104,9 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 
     **Error**
     ```bash
+    go get internal/aws-sdk-golang-examples: copying /tmp/go-build594918589/b001/exe/a.out: open /usr/local/go/bin/aws-sdk-golang-examples: permission denied
+
+    # Human friendly
     go get internal/aws-sdk-golang-examples: 
     copying /tmp/go-build594918589/b001/exe/a.out: 
     open /usr/local/go/bin/aws-sdk-golang-examples: permission denied
@@ -118,6 +121,9 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 
     **Error**
     ```bash
+    failed to list resources, operation error Resource Groups Tagging API: GetResources, exceeded maximum number of attempts, 3, https response error StatusCode: 0, RequestID: , request send failed, Post "https://tagging.eu-west-1.amazonaws.com/": x509: certificate signed by unknown authority
+
+    # Human friendly
     failed to list resources,
     operation error Resource Groups Tagging API: GetResources, exceeded maximum number of attempts, 3, 
     https response error StatusCode: 0,
