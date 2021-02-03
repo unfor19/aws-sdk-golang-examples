@@ -125,7 +125,8 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 
     # Human friendly
     failed to list resources,
-    operation error Resource Groups Tagging API: GetResources, exceeded maximum number of attempts, 3, 
+    operation error Resource Groups Tagging API: GetResources, 
+    exceeded maximum number of attempts, 3, 
     https response error StatusCode: 0,
     RequestID: , request send failed,
     Post "https://tagging.eu-west-1.amazonaws.com/":
