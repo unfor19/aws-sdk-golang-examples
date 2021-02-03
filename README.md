@@ -118,7 +118,12 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 
     **Error**
     ```bash
-    failed to list resources, operation error Resource Groups Tagging API: GetResources, exceeded maximum number of attempts, 3, https response error StatusCode: 0, RequestID: , request send failed, Post "https://tagging.eu-west-1.amazonaws.com/": x509: certificate signed by unknown authority
+    failed to list resources,
+    operation error Resource Groups Tagging API: GetResources, exceeded maximum number of attempts, 3, 
+    https response error StatusCode: 0,
+    RequestID: , request send failed,
+    Post "https://tagging.eu-west-1.amazonaws.com/":
+    x509: certificate signed by unknown authority
     ```
 
     **Fix** - Using [alpine](https://hub.docker.com/_/alpine/) for the final image, and not [scratch](https://hub.docker.com/_/scratch/) because `AWS_SESSION_TOKEN` env var doesn't work well on scratch.
