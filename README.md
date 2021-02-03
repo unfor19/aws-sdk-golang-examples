@@ -104,7 +104,9 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 
     **Error**
     ```bash
-    go get internal/aws-sdk-golang-examples: copying /tmp/go-build594918589/b001/exe/a.out: open /usr/local/go/bin/aws-sdk-golang-examples: permission denied
+    go get internal/aws-sdk-golang-examples: 
+    copying /tmp/go-build594918589/b001/exe/a.out: 
+    open /usr/local/go/bin/aws-sdk-golang-examples: permission denied
     ```
 
     **Fix**
