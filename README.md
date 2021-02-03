@@ -92,10 +92,10 @@ docker system df -v | grep "REPOSITORY\|resourcegroupstaggingapi"
 REPOSITORY                        TAG                        IMAGE ID       CREATED             SIZE      SHARED SIZE   UNIQUE SIZE   CONTAINERS
 unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 minutes ago       23.88MB   14.74MB       9.136MB       0
 
-#               real size:  23.88MB
-#             shared size:  14.75MB
-#             unique size:   9.14MB
-#          DockerHub size:  11.67MB
+#      real size:  23.88MB
+#    shared size:  14.75MB
+#    unique size:   9.14MB
+# DockerHub size:  11.67MB (https://hub.docker.com/r/unfor19/aws-sdk-golang-examples/tags?page=1&ordering=last_updated)
 ```
 
 ## Troubleshooting
