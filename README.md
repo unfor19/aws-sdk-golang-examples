@@ -39,6 +39,8 @@ $ TARGET_DIR="${HOME}/go/src/internal/aws-sdk-golang-resourcegroupstaggingapi"
 $ cd "$TARGET_DIR"
 $ cp aws-sdk-golang-resourcegroupstaggingapi.go "$TARGET_DIR"/
 $ go get -u -v # -u = download latest, -v = verbose output
+# You can also use `go mod download`
+# See `go.mod` and `go.sum` section and check the Dockerfile
 
 # `go get` Also builds a binary and copies it to /usr/local/go/bin/aws-sdk-golang-examples
 # TODO: figure out why
