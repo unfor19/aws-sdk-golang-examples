@@ -98,6 +98,7 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 #    shared size:  14.75MB
 #    unique size:   9.14MB
 # DockerHub size:  11.67MB
+```
 
 ## Troubleshooting
 
