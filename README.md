@@ -2,7 +2,7 @@
 
 An example of how to use AWS SDK Resource Groups Tagging API (resourcegroupstaggingapi) in GoLang.
 
-Tested on [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) Ubuntu 20.04
+Especially useful if you're new go GoLang (like me). Tested on [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10) Ubuntu 20.04
 
 ## Requirements
 
