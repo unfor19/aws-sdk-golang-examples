@@ -58,6 +58,33 @@ $ du -h aws-sdk-golang-examples # du = disk usage, -h = human readable
 8.8M
 ```
 
+## `go.mod` and `go.sum`
+
+To generate [go.mod](./go.mod) and [go.sum](./go.sum), follow the next steps
+
+```bash
+# Adds current package to `go.mod`
+$ go mod init
+
+# Adds dependencies and creates `go.sum` (lock file)
+$ go mod tidy
+
+# Download dependencies according to go.mod
+$ go mod download
+```
+
+## Docker
+
+```bash
+# Build
+$ docker build -t unfor19/aws-sdk-golang-examples:resourcegroupstaggingapi .
+
+# Generate `.env` file
+$ printenv | grep AWS_ > .env
+
+# Run - Passing credentials with `--env-file`
+docker run --rm -it --env-file=.env unfor19/aws-sdk-golang-examples:resourcegroupstaggingapi
+```
 
 ## Troubleshooting
 
@@ -73,3 +100,11 @@ $ du -h aws-sdk-golang-examples # du = disk usage, -h = human readable
     # Set current user:user_group as the owner
     $ sudo chown -R $USER:$(id -g -n $USER) /usr/local/go/bin/
     ```
+1. App fails to run due to credentials issue
+
+    **Error**
+    ```bash
+    failed to list resources, operation error Resource Groups Tagging API: GetResources, exceeded maximum number of attempts, 3, https response error StatusCode: 0, RequestID: , request send failed, Post "https://tagging.eu-west-1.amazonaws.com/": x509: certificate signed by unknown authority
+    ```
+
+    **Fix** - Using [alpine](https://hub.docker.com/_/alpine/) for the final image, and not [scratch](https://hub.docker.com/_/scratch/) because `AWS_SESSION_TOKEN` env var doesn't work well on scratch.
