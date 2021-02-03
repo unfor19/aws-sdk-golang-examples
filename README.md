@@ -77,6 +77,8 @@ $ go mod download
 
 ## Docker
 
+Build a Docker image according to the [Dockerfile](./Dockerfile)
+
 ```bash
 # Build
 $ docker build -t unfor19/aws-sdk-golang-examples:resourcegroupstaggingapi .
