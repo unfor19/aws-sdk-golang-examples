@@ -46,7 +46,7 @@ func main() {
 	tagFilter.Key = tagKey
 	tagFilter.Values = tagValues
 
-	// Using the Config value, create the DynamoDB client
+	// Using the Config value, create the Resource Groups Tagging API client
 	svc := resourcegroupstaggingapi.NewFromConfig(cfg)
 	params := &resourcegroupstaggingapi.GetResourcesInput{
 		TagFilters: []types.TagFilter{
