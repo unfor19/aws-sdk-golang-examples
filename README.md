@@ -77,7 +77,7 @@ $ go mod download
 
 ## Docker
 
-Build a Docker image according to the [Dockerfile](./Dockerfile)
+Build a Docker image according to the [Dockerfile](./Dockerfile). The image already is publicly available at [DockerHub unfor19/aws-sdk-golang-examples](https://hub.docker.com/r/unfor19/aws-sdk-golang-examples)
 
 ```bash
 # Build
@@ -97,8 +97,7 @@ unfor19/aws-sdk-golang-examples   resourcegroupstaggingapi   cb130f3efcfe   7 mi
 #      real size:  23.88MB
 #    shared size:  14.75MB
 #    unique size:   9.14MB
-# DockerHub size:  11.67MB (https://hub.docker.com/r/unfor19/aws-sdk-golang-examples/tags?page=1&ordering=last_updated)
-```
+# DockerHub size:  11.67MB
 
 ## Troubleshooting
 
