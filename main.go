@@ -55,13 +55,20 @@ func main() {
 			tagFilter, // Variable reference to an object
 		},
 	}
-
+	
 	resp, err := svc.GetResources(context.TODO(), params)
 	// Build the request with its input parameters
 	if err != nil {
 		log.Fatalf("failed to list resources, %v", err)
 	}
 
+	// GetResources
+	// Returns: GetResourcesOutput { PaginationToken *string `type:"string"` , ResourceTagMappingList []*ResourceTagMapping `type:"list"` }
+	// Docs: https://docs.aws.amazon.com/sdk-for-go/api/service/resourcegroupstaggingapi/#GetResourcesOutput
+	/*
+	The syntax "for _, res" means we ignore the first argument of the response, in this case, ignoring PaginationToken
+	You should replace "_" with "pgToken" to get PaginationToken in a variable.
+	*/
 	for _, res := range resp.ResourceTagMappingList {
 		fmt.Println("      Pointer address:", res.ResourceARN)
 		fmt.Println(" Value behind pointer:", *res.ResourceARN)
