@@ -37,7 +37,7 @@ Especially useful if you're new to GoLang (like me). Tested on [WSL2](https://do
 # Download and install dependencies
 $ TARGET_DIR="${HOME}/go/src/internal/aws-sdk-golang-examples"
 $ cd "$TARGET_DIR"
-$ cp main.go "$TARGET_DIR"/
+$ wget https://raw.githubusercontent.com/unfor19/aws-sdk-golang-examples/master/main.go 
 $ go get -u -v # -u = download latest, -v = verbose output
 # You can also use `go mod download`
 # See `go.mod` and `go.sum` section and check the Dockerfile
